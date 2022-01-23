@@ -5,11 +5,11 @@ import styles from "./Collection.module.css";
 import { BiChevronDown, BiSearch } from "react-icons/bi";
 import crossIcon from "assets/images/cross-icon.png";
 import Tabs from "components/Tabs/Tabs";
-import { NavLink, Outlet } from "react-router-dom";
+// import { NavLink, Outlet } from "react-router-dom";
 import DataContext from "context/DataContext";
 import OutsideClickDetector from "hooks/OutsideClickDetector";
 import TabPan from "components/Tabs/TabPan";
-import Cards from "../MarketPlace/Cards";
+// import Cards from "../MarketPlace/Cards";
 import Tab from "components/Tabs/Tab";
 import CardComponent from "components/CardComponent";
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Gallery.module.css";
 
-import back from "assets/images/back.png";
+// import back from "assets/images/back.png";
 import background from "assets/images/background.png";
 import clothes from "assets/images/clothes.png";
 import eyes from "assets/images/eyes.png";
@@ -9,7 +9,7 @@ import Fur from "assets/images/Fur.png";
 import Hat from "assets/images/Hat.png";
 import mouth from "assets/images/mouth.png";
 import baseCharacter from "assets/images/baseCharacter.png";
-import UrlImageDownloader from "react-url-image-downloader";
+// import UrlImageDownloader from "react-url-image-downloader";
 import crossIcon from "assets/images/cross-icon.png";
 import OutsideClickDetector from "hooks/OutsideClickDetector";
 import Accordion from "./Accordion";

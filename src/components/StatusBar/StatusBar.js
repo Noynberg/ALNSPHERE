@@ -8,7 +8,7 @@ import ufo from "assets/images/ufo-3.png";
 import Tab from "components/Tabs/Tab";
 import Tabs from "components/Tabs/Tabs";
 import TabPan from "components/Tabs/TabPan";
-import DataContext from "context/DataContext";
+// import DataContext from "context/DataContext";
 
 const Card = ({ title, value, img }) => {
   return (

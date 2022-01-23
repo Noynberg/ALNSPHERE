@@ -9,8 +9,7 @@ function Navbar() {
   const {
     isSidebarOpen,
     setIsSidebarOpen,
-    isFilterBarOpen,
-    setIsFilterBarOpen,
+    
   } = useContext(AlnSphereCreaturesContext_Provider);
   return (
     <div className="navbar bg-purple-3">

@@ -4,7 +4,7 @@ import { BiChevronDown } from "react-icons/bi";
 
 const Accordion = ({ title, bodyContent, setImage, image }) => {
   const [isOpen, setIsOpen] = React.useState(false);
-  const [isSelectedInsideParent, setIsSelectedInsideParent] =
+  const [isSelectedInsideParent] =
     React.useState(false);
   const bodyRef = React.useRef(null);
   const componentRef = React.useRef();

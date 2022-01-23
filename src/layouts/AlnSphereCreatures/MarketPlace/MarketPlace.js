@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import "./MarketPlace.css";
 import { BsFillGrid1X2Fill, BsShop, BsStack } from "react-icons/bs";
 import { FaBoxes } from "react-icons/fa";
@@ -11,28 +11,28 @@ import SidebarTab from "./SidebarTab";
 import OutsideClickDetector from "hooks/OutsideClickDetector";
 
 function MarketPlace() {
-  const [ETHRate, setETHRate] = useState(3797);
+  // const [setETHRate] = useState(3797);
 
   const { isSidebarOpen, setIsSidebarOpen } = useContext(
     AlnSphereCreaturesContext_Provider
   );
 
-  React.useEffect(() => {
-    fetch("https://api.coinbase.com/v2/exchange-rates?currency=ETH")
-      .then((res) => res.json())
-      .then(
-        (result) => {
-          setETHRate(result.data.rates.USD);
-          console.log(result.data.rates.USD);
-        },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
-        (error) => {
-          console.log(error);
-        }
-      );
-  }, []);
+  // React.useEffect(() => {
+  //   fetch("https://api.coinbase.com/v2/exchange-rates?currency=ETH")
+  //     .then((res) => res.json())
+  //     .then(
+  //       (result) => {
+  //         setETHRate(result.data.rates.USD);
+  //         console.log(result.data.rates.USD);
+  //       },
+  //       // Note: it's important to handle errors here
+  //       // instead of a catch() block so that we don't swallow
+  //       // exceptions from actual bugs in components.
+  //       (error) => {
+  //         console.log(error);
+  //       }
+  //     );
+  // }, []);
 
   let menuRef = OutsideClickDetector(() => {
     // setIsFilterBarOpen(false);
