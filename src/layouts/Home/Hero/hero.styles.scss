@@ -1,10 +1,11 @@
 .hero {
-  .glitched_text {
+
+  .mobile-header-text {
     font-size: 3.5rem;
     color: white;
   }
   display: block;
-  height: 115vh;
+  height: 100vh;
   // background-image: url('./../../../assets/img/desktop.jpeg');
   background-repeat: no-repeat;
   background-size: 100%;
@@ -30,14 +31,14 @@
 
   .canvas-container {
     position: absolute;
-    height: 115vh;
+    height: 100vh;
     width: 100vw;
   }
   .parallax-holder {
     width: 100%;
-    height: 115vh;
+    height: 100vh;
     // background: red;
-    // background-image: url("../../../assets/img/NFT\ Proyect\ Illustration\ 2\ \(1440x900\)\ v2.jpg");
+    background-image: url("https://ik.imagekit.io/6pl7k4a01ha/hero/bg-min_58DdIoI4y.png?ik-sdk-version=javascript-1.4.3&updatedAt=1642866642291");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -66,25 +67,28 @@
         height: 100%;
       }
       .base-character {
-        max-width: 640px;
-        width: 50vw;
+        max-width: 500px;
+        width: 40vw;
         position: absolute;
         bottom: 15% !important;
         left: 5% !important;
-
         img {
           width: 100%;
-
           @media (min-width: 1500px) {
-            width: 700px !important;
+            width: 590px !important;
           }
           @media (min-width: 1700px) {
-            width: 800px !important;
+            width: 600px !important;
           }
           @media (min-width: 1900px) {
-            width: 900px !important;
+            width: 620px !important;
+          }
+          @media (min-width: 2100px) {
+            width: 30vw !important;
           }
         }
+
+    
       }
       .dragon-image {
         max-width: 55vw;
@@ -132,6 +136,81 @@
     }
   }
 
+  .layer{
+    position: relative;
+    z-index: 1;
+    .dragon-glow{
+      position: absolute;
+      top: calc(50% - 20px);
+      left: calc(48.7% - 20px);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #fff;
+      box-shadow: 0 0 60px 30px #fff, 0 0 100px 60px #fbbefb, 0 0 140px 90px #0ff;
+      animation: dragon-light 3s infinite;
+    }
+    .flame-anim-container{
+      position: absolute;
+      top: 55%;
+      left: 25%;
+      .flame-anim{
+        // background: rgb(144 0 245);
+        border:2px solid rgba(255,255,255,.1);
+        border-radius:400px;
+        position:absolute;
+        margin:auto;
+        @for $i from 1 through 60{
+          &:nth-of-type(#{$i}){
+            // box-shadow: 3px 0px rgba(255,255,255, - ($i/40)),6px -5px rgba(10, 0, 0,  - ($i/40));
+            box-shadow:
+              inset 0 0 50px #fff,
+              inset 20px 0 80px #f0f,
+              inset -20px 0 80px #0ff,
+              inset 20px 0 300px #f0f,
+              inset -20px 0 300px #0ff,
+              0 0 50px #fff,
+              -10px 0 80px #f0f,
+              10px 0 80px #0ff;
+            width:($i * 6) + 0px;
+            height:($i * 1) + 0px;
+            right:($i * 10) + 0px;
+            bottom:($i * 10) + 0px;
+            //-webkit-filter:blur($i/3 + 8px);
+            -webkit-filter: blur(calc($i/3) + 8px);
+            -moz-filter: blur(calc($i/3) + 8px);
+            -o-filter: blur(calc($i/3) + 8px);
+            -ms-filter: blur(calc($i/3) + 8px);
+            //filter: url(#blur);
+            transform-origin: calc($i * 4) + 0px ($i * 2) + 0px;
+            animation: spin 3s calc($i/10) + 0s linear infinite;
+            // background:rgba(90 + ($i*3),33 + ($i*1) ,205,1 - ($i/80));
+            background:rgba(90 + ($i*3),33 + ($i*1) ,205, 1);
+          }
+        }
+      }
+
+      @keyframes spin{
+        0%{transform:rotate(0deg)}
+        100%{transform:rotate(360deg)}
+      }
+    }
+
+    @keyframes dragon-light {
+      0%{
+        box-shadow: 0 0 60px 30px #fff, 0 0 100px 60px #fbbefb, 0 0 140px 90px #0ff;
+      }
+      50%{
+        box-shadow: 0 0 60px 30px #fff, 0 0 128px 36px #e1e1e1;
+      }
+      100%{
+        box-shadow: 0 0 60px 30px #fff, 0 0 100px 60px #fbbefb, 0 0 140px 90px #0ff;
+      }
+    }
+
+  }
+
+
   .parallax-scene {
     transition: all 1s linear;
     z-index: 2;
@@ -165,179 +244,6 @@
     left: 30%;
   }
 
-  $bg-color: #646494;
-  $glitch-bg-color: $bg-color;
-  .glitch {
-    position: relative;
-    margin: 0 auto;
-    background: $glitch-bg-color;
-  }
-
-  .glitch::before,
-  .glitch::after {
-    animation-iteration-count: infinite;
-    animation-timing-function: linear;
-    animation-direction: alternate-reverse;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    clip: rect(0, 900px, 0, 0);
-    content: attr(data-text);
-  }
-
-  .glitch::after {
-    animation-name: glitch-animation;
-    animation-duration: 4s;
-    left: 4px;
-    text-shadow: -1px 0 #ffa800;
-    background: $glitch-bg-color;
-  }
-
-  .glitch::before {
-    animation-name: glitch-animation-2;
-    animation-duration: 6s;
-    left: -4px;
-
-    background: $glitch-bg-color;
-  }
-
-  @mixin rect($top, $bottom) {
-    clip: rect($top, 9999px, $bottom, 0);
-  }
-
-  /* Expanded Animations */
-  @keyframes glitch-animation {
-    0% {
-      @include rect(42px, 44px);
-    }
-    5% {
-      @include rect(12px, 59px);
-    }
-    10% {
-      @include rect(48px, 29px);
-    }
-    15.0% {
-      @include rect(42px, 73px);
-    }
-    20% {
-      @include rect(63px, 27px);
-    }
-    25% {
-      @include rect(34px, 55px);
-    }
-    30.0% {
-      @include rect(86px, 73px);
-    }
-    35% {
-      @include rect(20px, 20px);
-    }
-    40% {
-      @include rect(26px, 60px);
-    }
-    45% {
-      @include rect(25px, 66px);
-    }
-    50% {
-      @include rect(57px, 98px);
-    }
-    55.0% {
-      @include rect(5px, 46px);
-    }
-    60.0% {
-      @include rect(82px, 31px);
-    }
-    65% {
-      @include rect(54px, 27px);
-    }
-    70% {
-      @include rect(28px, 99px);
-    }
-    75% {
-      @include rect(45px, 69px);
-    }
-    80% {
-      @include rect(23px, 85px);
-    }
-    85.0% {
-      @include rect(54px, 84px);
-    }
-    90% {
-      @include rect(45px, 47px);
-    }
-    95% {
-      @include rect(37px, 20px);
-    }
-    100% {
-      @include rect(4px, 91px);
-    }
-  }
-
-  @keyframes glitch-animation-2 {
-    0% {
-      @include rect(65px, 100px);
-    }
-    5% {
-      @include rect(52px, 74px);
-    }
-    10% {
-      @include rect(79px, 85px);
-    }
-    15.0% {
-      @include rect(75px, 5px);
-    }
-    20% {
-      @include rect(67px, 61px);
-    }
-    25% {
-      @include rect(14px, 79px);
-    }
-    30.0% {
-      @include rect(1px, 66px);
-    }
-    35% {
-      @include rect(86px, 30px);
-    }
-    40% {
-      @include rect(23px, 98px);
-    }
-    45% {
-      @include rect(85px, 72px);
-    }
-    50% {
-      @include rect(71px, 75px);
-    }
-    55.0% {
-      @include rect(2px, 48px);
-    }
-    60.0% {
-      @include rect(30px, 16px);
-    }
-    65% {
-      @include rect(59px, 50px);
-    }
-    70% {
-      @include rect(41px, 62px);
-    }
-    75% {
-      @include rect(2px, 82px);
-    }
-    80% {
-      @include rect(47px, 73px);
-    }
-    85.0% {
-      @include rect(3px, 27px);
-    }
-    90% {
-      @include rect(26px, 55px);
-    }
-    95% {
-      @include rect(42px, 97px);
-    }
-    100% {
-      @include rect(38px, 49px);
-    }
-  }
-
   .button {
     width: fit-content;
     display: flex;
@@ -367,6 +273,7 @@ $shooting-time: 3000ms;
   justify-content: center;
   align-items: center;
   background-image: url("https://ik.imagekit.io/6pl7k4a01ha/ImageBackground-min_pljLOkd7f.png?updatedAt=1639321667708") !important;
+  // background-image: url("https://ik.imagekit.io/6pl7k4a01ha/Planet-min_Fo__OCE0qqb.png?updatedAt=1639321668300") !important;
   background-repeat: no-repeat;
   background-size: cover !important;
   background-position: top !important;
@@ -374,6 +281,22 @@ $shooting-time: 3000ms;
   overflow: hidden !important;
   z-index: 1000000;
   transform: rotateZ(0deg);
+
+  .mobile_hero{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url("https://ik.imagekit.io/6pl7k4a01ha/Planet-min_Fo__OCE0qqb.png?updatedAt=1639321668300") !important;
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   .glitch_image {
     position: absolute;
@@ -407,28 +330,6 @@ $shooting-time: 3000ms;
       background-position: center;
       z-index: -1;
     }
-
-    &::before {
-      left: -6px;
-      animation: glitch-effect 5s infinite linear alternate-reverse;
-      animation-delay: 2s;
-      background-image: url("https://ik.imagekit.io/6pl7k4a01ha/planetblue_myWAgQIwb.png?updatedAt=1639330381023");
-    }
-    &::after {
-      left: 6px;
-      animation: glitch-effect 9s infinite linear alternate-reverse;
-      background-image: url("https://ik.imagekit.io/6pl7k4a01ha/planetgray_9wEEaEDKu.png?updatedAt=1639330379297");
-    }
-
-    $steps: 55;
-
-    @keyframes glitch-effect {
-      @for $i from 0 through $steps {
-        #{percentage($i*(1/$steps))} {
-          clip: rect(random(100) + vh, 100vw, random(100) + vh, 0);
-        }
-      }
-    }
   }
 
   .ainsphere-text {
@@ -448,86 +349,103 @@ $shooting-time: 3000ms;
   text-align: center;
 }
 
-.night {
-  position: absolute;
-  width: 100%;
-  height: 44%;
-  transform: rotateZ(50deg);
-  // animation: sky 200000ms linear infinite;
-  overflow: hidden !important;
-}
 
-.shooting_star {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  // width: 100px;
-  height: 2px;
-  background: linear-gradient(
-    -45deg,
-    rgba(95, 145, 255, 1),
-    rgba(0, 0, 255, 0)
-  );
-  border-radius: 999px;
-  filter: drop-shadow(0 0 6px rgba(105, 155, 255, 1));
-  animation: tail $shooting-time ease-in-out infinite,
-    shooting $shooting-time ease-in-out infinite;
-
-  &::before {
-    content: "";
+.particles-anim-container{
+  position: relative;
+  z-index: 2;
+  .circle-container {
+    $particleNum: 200;
+    $particleColor: hsl(180, 100%, 80%);
     position: absolute;
-    top: calc(50% - 1px);
-    right: 0;
-    // width: 30px;
-    height: 2px;
-    background: linear-gradient(
-      -45deg,
-      rgba(0, 0, 255, 0),
-      rgba(95, 145, 255, 1),
-      rgba(0, 0, 255, 0)
-    );
-    transform: translateX(50%) rotateZ(45deg);
-    border-radius: 100%;
-    animation: shining $shooting-time ease-in-out infinite;
-  }
+    transform: translateY(-10vh);
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
 
-  &::after {
-    // CodePen Error
-    // @extend .shooting_star::before;
+    .circle {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      mix-blend-mode: screen;
+      background-image: radial-gradient(
+        hsl(180, 100%, 80%),
+        hsl(180, 100%, 80%) 10%,
+        hsla(180, 100%, 80%, 0) 56%
+      );
 
-    content: "";
-    position: absolute;
-    top: calc(50% - 1px);
-    right: 0;
-    // width: 30px;
-    height: 2px;
-    background: linear-gradient(
-      -45deg,
-      rgba(0, 0, 255, 0),
-      rgba(95, 145, 255, 1),
-      rgba(0, 0, 255, 0)
-    );
-    transform: translateX(50%) rotateZ(45deg);
-    border-radius: 100%;
-    animation: shining $shooting-time ease-in-out infinite;
-    transform: translateX(50%) rotateZ(-45deg);
-  }
+      animation: fadein-frames 200ms infinite, scale-frames 2s infinite;
 
-  @for $i from 1 through 20 {
-    &:nth-child(#{$i}) {
-      $delay: random(9999) + 0ms;
-      top: calc(50% - #{random(400) - 200px});
-      left: calc(50% - #{random(300) + 0px});
-      animation-delay: $delay;
-      // opacity: random(50) / 100 + 0.5;
+      @keyframes fade-frames {
+        0% {
+          opacity: 1;
+        }
 
-      &::before,
-      &::after {
-        animation-delay: $delay;
+        50% {
+          opacity: 0.7;
+        }
+
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes scale-frames {
+        0% {
+          transform: scale3d(0.4, 0.4, 1);
+        }
+
+        50% {
+          transform: scale3d(2.2, 2.2, 1);
+        }
+
+        100% {
+          transform: scale3d(0.4, 0.4, 1);
+        }
+      }
+    }
+
+    $particleBaseSize: 8;
+
+    
+    @for $i from 1 through $particleNum {
+      &:nth-child(#{$i}) {
+        $circleSize: random($particleBaseSize);
+        width: $circleSize + px;
+        height: $circleSize + px;
+
+        $startPositionY: random(10) + 100;
+        $framesName: "move-frames-" + $i;
+        $moveDuration: 28000 + random(9000) + ms;
+
+        animation-name: #{$framesName};
+        animation-duration: $moveDuration;
+        animation-delay: random(37000) + ms;
+
+        @keyframes #{$framesName} {
+          from {
+            transform: translate3d(
+              #{random(100) + vw},
+              #{$startPositionY + vh},
+              0
+            );
+          }
+
+          to {
+            transform: translate3d(
+              #{random(100) + vw},
+              #{- $startPositionY - random(30) + vh},
+              0
+            );
+          }
+        }
+
+        .circle {
+          animation-delay: random(4000) + ms;
+        }
       }
     }
   }
 }
+
 
 @keyframes tail {
   0% {

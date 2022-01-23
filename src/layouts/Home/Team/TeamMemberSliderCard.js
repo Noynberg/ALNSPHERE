@@ -1,12 +1,12 @@
 import React, { memo } from "react";
 import styles from "./Team.module.css";
 import { GoMail } from "react-icons/go";
-import { AiOutlineInstagram, AiOutlineLinkedin } from "react-icons/ai";
+import { AiOutlineInstagram, AiOutlineLinkedin, AiOutlineTwitter } from "react-icons/ai";
 
 import { IKImage } from "imagekitio-react";
 
 const TeamMemberSliderCard = (props) => {
-  const { image, name, designation, description, instagramLink, emailLink, linkedInLink } =
+  const { image, name, designation, description, instagramLink, emailLink, linkedInLink, twitterLink } =
     props.data;
   return (
     <div className={styles.team_member_slider_card}>
@@ -47,6 +47,13 @@ const TeamMemberSliderCard = (props) => {
         {linkedInLink ? (
           <a href={linkedInLink} rel="noreferrer" target="_blank">
             <AiOutlineLinkedin />
+          </a>
+        ) : (
+          ""
+        )}
+        {twitterLink ? (
+          <a href={twitterLink} rel="noreferrer" target="_blank">
+            <AiOutlineTwitter />
           </a>
         ) : (
           ""

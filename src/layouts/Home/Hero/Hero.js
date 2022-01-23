@@ -1,7 +1,7 @@
-import React, { Suspense, useRef, useState, useEffect, memo } from "react";
-import { Canvas, useFrame, useLoader } from "@react-three/fiber";
+import React, { useRef,  useEffect, memo } from "react";
+// import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import "./ImageFadeMaterial";
-import { TextureLoader, MathUtils } from "three";
+// import { TextureLoader, MathUtils } from "three";
 import {presets, queueWrite} from 'glitched-writer';
 
 import "./hero.styles.scss";
@@ -14,60 +14,60 @@ const TriShapeButton = React.lazy(() =>
   import("components/Buttons/TriShapeButton/TriShapeButton")
 );
 
-function FadingImage() {
-  const ref = useRef();
-  const [texture1, texture2, dispTexture] = useLoader(TextureLoader, [
-    "https://ik.imagekit.io/6pl7k4a01ha/WithoutHealthBar_Iku7c27JCL.png?updatedAt=1639157956179",
-    "https://ik.imagekit.io/6pl7k4a01ha/WithoutPaused_RQEnQSSRH.png?updatedAt=1639157956283",
-    "https://ik.imagekit.io/6pl7k4a01ha/water-img_oYGDv1Jx1.jpg?updatedAt=1639157953051",
-  ]);
-  const [hovered, setHover] = useState(false);
+// function FadingImage() {
+//   const ref = useRef();
+//   const [texture1, texture2, dispTexture] = useLoader(TextureLoader, [
+//     "https://ik.imagekit.io/6pl7k4a01ha/hero/bg-min_58DdIoI4y.png?ik-sdk-version=javascript-1.4.3&updatedAt=1642866642291",
+//     "https://ik.imagekit.io/6pl7k4a01ha/hero/Img2New_MKvgjSpyD.png?ik-sdk-version=javascript-1.4.3&updatedAt=1642823953005",
+//     "https://ik.imagekit.io/6pl7k4a01ha/water-img_oYGDv1Jx1.jpg?updatedAt=1639157953051",
+//   ]);
+//   const [hovered, setHover] = useState(false);
 
-  useFrame(
-    () =>
-      (ref.current.dispFactor = MathUtils.lerp(
-        ref.current.dispFactor,
-        !!hovered,
-        0.1
-      ))
-  );
+//   useFrame(
+//     () =>
+//       (ref.current.dispFactor = MathUtils.lerp(
+//         ref.current.dispFactor,
+//         !!hovered,
+//         0.1
+//       ))
+//   );
 
-  useEffect(() => {
-    const handleScroll = (e) => {
-      if (window.pageYOffset > 40) {
-        setHover(true);
-      } else if (
-        window.innerHeight + window.pageYOffset ===
-        window.innerHeight
-      ) {
-        setHover(false);
-      }
-    };
+//   useEffect(() => {
+//     const handleScroll = (e) => {
+//       if (window.pageYOffset > 40) {
+//         setHover(true);
+//       } else if (
+//         window.innerHeight + window.pageYOffset ===
+//         window.innerHeight
+//       ) {
+//         setHover(false);
+//       }
+//     };
 
-    document.addEventListener("mouseup", handleScroll);
-    document.addEventListener("mousedown", handleScroll);
+//     document.addEventListener("mouseup", handleScroll);
+//     document.addEventListener("mousedown", handleScroll);
 
-    document.addEventListener("scroll", handleScroll);
+//     document.addEventListener("scroll", handleScroll);
 
-    return () => {
-      document.removeEventListener("scroll", handleScroll);
-      document.removeEventListener("mouseup", handleScroll);
-      document.removeEventListener("mousedown", handleScroll);
-    };
-  });
+//     return () => {
+//       document.removeEventListener("scroll", handleScroll);
+//       document.removeEventListener("mouseup", handleScroll);
+//       document.removeEventListener("mousedown", handleScroll);
+//     };
+//   });
 
-  return (
-    <mesh>
-      <planeGeometry args={[1700, 1000]} />
-      <imageFadeMaterial
-        ref={ref}
-        tex={texture1}
-        tex2={texture2}
-        disp={dispTexture}
-      />
-    </mesh>
-  );
-}
+//   return (
+//     <mesh>
+//       <planeGeometry args={[1720, 1000]} />
+//       <imageFadeMaterial
+//         ref={ref}
+//         tex={texture1}
+//         tex2={texture2}
+//         disp={dispTexture}
+//       />
+//     </mesh>
+//   );
+// }
 
 function HeroFadeImg() {
   let parallax_element = useRef(null);
@@ -107,35 +107,56 @@ function HeroFadeImg() {
     };
   });
 
-  useEffect(() => {
-    const handleScroll = (e) => {
-      if (window.pageYOffset > 40) {
-        if (parallax_element.current) {
-          parallax_element.current.style.display = "none";
-        }
-        // typewriterRef.current.style.display = "block";
-      } else if (
-        window.innerHeight + window.pageYOffset ===
-        window.innerHeight
-      ) {
-        if (parallax_element.current) {
-          parallax_element.current.style.display = "block";
-        }
-        // typewriterRef.current.style.display = "none";
-      }
-    };
+  // useEffect(() => {
+  //   const handleScroll = (e) => {
+  //     if (window.pageYOffset > 40) {
+  //       if (parallax_element.current) {
+  //         parallax_element.current.style.display = "none";
+  //       }
+  //       // typewriterRef.current.style.display = "block";
+  //     } else if (
+  //       window.innerHeight + window.pageYOffset ===
+  //       window.innerHeight
+  //     ) {
+  //       if (parallax_element.current) {
+  //         parallax_element.current.style.display = "block";
+  //       }
+  //       // typewriterRef.current.style.display = "none";
+  //     }
+  //   };
 
-    document.addEventListener("mouseup", handleScroll);
-    document.addEventListener("mousedown", handleScroll);
+  //   document.addEventListener("mouseup", handleScroll);
+  //   document.addEventListener("mousedown", handleScroll);
 
-    document.addEventListener("scroll", handleScroll);
+  //   document.addEventListener("scroll", handleScroll);
 
-    return () => {
-      document.removeEventListener("scroll", handleScroll);
-      document.removeEventListener("mouseup", handleScroll);
-      document.removeEventListener("mousedown", handleScroll);
-    };
-  });
+  //   return () => {
+  //     document.removeEventListener("scroll", handleScroll);
+  //     document.removeEventListener("mouseup", handleScroll);
+  //     document.removeEventListener("mousedown", handleScroll);
+  //   };
+  // });
+
+
+  const flameAnimation = () => {
+    let items = [];
+    for(let i = 0; i < 30; i++){
+      items.push(<div className="flame-anim"></div>)
+    }
+    return items;
+  }
+
+  const circleParticles = () => {
+    let items = [];
+    for (let i = 0; i < 100; i++){
+      items.push(
+        <div class="circle-container">
+          <div class="circle"></div>
+        </div>
+      )
+    }
+    return items;
+  }
 
   return (
     <section className="hero">
@@ -151,7 +172,7 @@ function HeroFadeImg() {
           />
         </a>
       </div>
-      <div className="canvas-container">
+      {/* <div className="canvas-container">
         <Canvas
           camera={{
             position: [0, 0, 182],
@@ -164,9 +185,10 @@ function HeroFadeImg() {
             <FadingImage />
           </Suspense>
         </Canvas>
-      </div>
+      </div> */}
 
       <div className="parallax-holder" ref={parallax_element}>
+        <div className = 'particles-anim-container'>{circleParticles()}</div>
         <div className="parallax-scene" id="parallax_scene">
           <div data-depth="5" className="layer shot-character">
             <IKImage
@@ -178,18 +200,22 @@ function HeroFadeImg() {
             {/* <img style={{ opacity: 0.7 }} src={evilEyes} alt="" /> */}
           </div>
           <div data-depth="2" className="layer base-character">
+            <div className="flame-anim-container">
+              {flameAnimation()}
+            </div>
             <IKImage
               urlEndpoint={"https://ik.imagekit.io/6pl7k4a01ha"}
-              path="main-character_4vSxVz8BL12.png"
+              path="/hero/MainCharacter-min_taiI61WN8.png"
               loading="lazy"
               lqip={{ active: true }}
             />
             {/* <img src={mainCharacter} alt="" /> */}
           </div>
           <div data-depth="5" className="layer dragon-image">
+            <div className="dragon-glow"></div>
             <IKImage
               urlEndpoint={"https://ik.imagekit.io/6pl7k4a01ha"}
-              path="dragon_TY8RUEHdd.png"
+              path="/hero/Dragon-min_uXGWJfEYa.png"
               loading="lazy"
               lqip={{ active: true }}
             />
@@ -199,32 +225,12 @@ function HeroFadeImg() {
       </div>
 
       <div className="mobile-parallax-holder">
-        {/* <div class="night">
-          <div class="shooting_star"></div>
-          <div class="shooting_star"></div>
-          <div class="shooting_star"></div>
-          <div class="shooting_star"></div>
-          <div class="shooting_star"></div>
-          <div class="shooting_star"></div>
-          <div class="shooting_star"></div>
-          <div class="shooting_star"></div>
-          <div class="shooting_star"></div>
-          <div class="shooting_star"></div>
-          <div class="shooting_star"></div>
-          <div class="shooting_star"></div>
-          <div class="shooting_star"></div>
-          <div class="shooting_star"></div>
-          <div class="shooting_star"></div>
-          <div class="shooting_star"></div>
-          <div class="shooting_star"></div>
-          <div class="shooting_star"></div>
-          <div class="shooting_star"></div>
-          <div class="shooting_star"></div>
-        </div> */}
-
-        <div className="glitch_image">
-          <h1 id = 'glitch_text' className="glitched_text">Alnsphere</h1>
+        <div className="mobile_hero">
+          <h1 id = 'glitch_text' className="glitched_text mobile-header-text">Alnsphere</h1>
         </div>
+        {/* <div className="glitch_image">
+          <h1 id = 'glitch_text' className="glitched_text">Alnsphere</h1>
+        </div> */}
       </div>
     </section>
   );

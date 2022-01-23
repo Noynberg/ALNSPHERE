@@ -23,15 +23,16 @@ export const membersData = [
     emailLink: "Max@alnsphere.com",
     linkedInLink: 'https://www.linkedin.com/in/max-steltzer-25b793227/'
   },
-
   {
-    name: "Matheo Veulner",
-    image: "team-member-6_SPm7SyfmW.png",
+    name: "Respa",
+    image: "PixelPic_Respa.png",
     image2:
-      "https://ik.imagekit.io/6pl7k4a01ha/team-member-6_SPm7SyfmW.png?updatedAt=1639157950992",
-    designation: "3D Lead Artist",
-    description: `Over 500 character models have been made by his hands. Modelling, rigging and animation are his profession.`,
-    emailLink: "Matheo@alnsphere.com",
+      "https://ik.imagekit.io/6pl7k4a01ha/PixelPic_Respa.png?ik-sdk-version=javascript-1.4.3&updatedAt=1642694610166",
+    designation: "Game & Graphic Designer",
+    description: `Years of experience in game and graphic design. \n Think different - be different!`,
+    instagramLink: "https://instagram.com/respatyns?utm_medium=copy_link",
+    twitterLink: 'https://twitter.com/respatyns?s=21',
+    linkedInLink: 'https://www.linkedin.com/mwlite/in/respatyns',
   },
 
   {
@@ -54,14 +55,24 @@ export const membersData = [
   },
 
   {
-    name: "Young Paris",
-    image: "team-member-2_N8LMfLuVWNkJ.png",
+    name: "Matheo Veulner",
+    image: "team-member-6_SPm7SyfmW.png",
     image2:
-      "https://ik.imagekit.io/6pl7k4a01ha/team-member-2_N8LMfLuVWNkJ.png?updatedAt=1639157949833",
-    designation: "Advisor",
-    description: `Singer, songwriter, performer and model based in New York and Los Angeles.
-    Signed to Jay-Z, landing features in Essence, Vogue, and W Magazine.
-    `,
-    instagramLink: "https://www.instagram.com/youngparis/",
+      "https://ik.imagekit.io/6pl7k4a01ha/team-member-6_SPm7SyfmW.png?updatedAt=1639157950992",
+    designation: "3D Lead Artist",
+    description: `Over 500 character models have been made by his hands. Modelling, rigging and animation are his profession.`,
+    emailLink: "Matheo@alnsphere.com",
   },
+
+  // {
+  //   name: "Young Paris",
+  //   image: "team-member-2_N8LMfLuVWNkJ.png",
+  //   image2:
+  //     "https://ik.imagekit.io/6pl7k4a01ha/team-member-2_N8LMfLuVWNkJ.png?updatedAt=1639157949833",
+  //   designation: "Advisor",
+  //   description: `Singer, songwriter, performer and model based in New York and Los Angeles.
+  //   Signed to Jay-Z, landing features in Essence, Vogue, and W Magazine.
+  //   `,
+  //   instagramLink: "https://www.instagram.com/youngparis/",
+  // },
 ];

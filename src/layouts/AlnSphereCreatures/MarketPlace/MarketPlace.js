@@ -23,6 +23,7 @@ function MarketPlace() {
       .then(
         (result) => {
           setETHRate(result.data.rates.USD);
+          console.log(result.data.rates.USD);
         },
         // Note: it's important to handle errors here
         // instead of a catch() block so that we don't swallow

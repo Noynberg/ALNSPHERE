@@ -37,7 +37,26 @@ const Card = ({ title, value, img }) => {
 };
 
 function StatusBar() {
-  const { ETHRate } = React.useContext(DataContext);
+  const [ETHRate, setETHRate ] = React.useState(3180);
+
+  React.useEffect(() => {
+    fetch("https://api.coinbase.com/v2/exchange-rates?currency=ETH")
+      .then((res) => res.json())
+      .then(
+        (result) => {
+          setETHRate(result.data.rates.USD);
+          console.log(result.data.rates.USD);
+        },
+        // Note: it's important to handle errors here
+        // instead of a catch() block so that we don't swallow
+        // exceptions from actual bugs in components.
+        (error) => {
+          console.log(error);
+        }
+      );
+  }, []);
+
+  // console.log(ETHRate);
 
   return (
     <Tabs defaultTab="24h">
@@ -94,7 +113,7 @@ function StatusBar() {
           />
           <Card
             img={alien}
-            value={{ twentyFour: "36,724", seven: "36,678", thirty: "37,432" }}
+            value={{ twentyFour: "102", seven: "483", thirty: "1255" }}
             title="ALNS SOLD"
           />
         </div>
