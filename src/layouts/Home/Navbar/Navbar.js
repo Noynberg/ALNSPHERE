@@ -1,5 +1,5 @@
 import ButtonHover from "components/Buttons/ButtonHover/ButtonHover";
-import React, { memo, useEffect, useState } from "react";
+import React, { memo, useEffect, useState, useContext } from "react";
 import styles from "./Navbar.module.css";
 import { Link } from "react-router-dom";
 
@@ -7,6 +7,7 @@ import { FaTwitter } from "react-icons/fa";
 import { BsDiscord } from "react-icons/bs";
 // import { AiTwotoneShop } from "react-icons/ai";
 import { IoNewspaperSharp } from "react-icons/io5";
+import DataContext from "context/DataContext";
 
 const TriShapeButton = React.lazy(() =>
   import("components/Buttons/TriShapeButton/TriShapeButton")
@@ -16,32 +17,34 @@ const IKImage = React.lazy(() =>
 );
 
 function Navbar() {
-  const [scrolled, setScrolled] = useState(false);
+  const {setShowDiscordPopup} = useContext(DataContext);
+  // const [scrolled, setScrolled] = useState(false);
 
-  useEffect(() => {
-    const handler = () => {
-      const scrollTop = window.scrollY;
+  // useEffect(() => {
+  //   const handler = () => {
+  //     const scrollTop = window.scrollY;
 
-      if (scrollTop > 100) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
-    };
+  //     if (scrollTop > 100) {
+  //       setScrolled(true);
+  //     } else {
+  //       setScrolled(false);
+  //     }
+  //   };
 
-    window.addEventListener("scroll", handler);
+  //   window.addEventListener("scroll", handler);
 
-    return () => {
-      window.removeEventListener("scroll", handler);
-    };
-  });
+  //   return () => {
+  //     window.removeEventListener("scroll", handler);
+  //   };
+  // });
 
   return (
-    <div
-      className={`${styles.navbarWrapper} ${
-        scrolled ? styles.scrolled : ""
-      } bg-purple-2`}
-    >
+    // <div
+    //   className={`${styles.navbarWrapper} ${
+    //     scrolled ? styles.scrolled : ""
+    //   } bg-purple-2`}
+    // >
+    <div className={`${styles.navbarWrapper} ${styles.scrolled} bg-purple-2`}>
       <div className="container-wrapper">
         <div className={styles.navbar}>
           <div className={styles.navbarLeft}>
@@ -53,11 +56,13 @@ function Navbar() {
               <ButtonHover iconSize="1.2rem" icon={<FaTwitter />} />
             </a>
             <a
-              href="https://discord.com/invite/YgeEwVa6Yn"
+              href="https://discord.com/invite/alnsphere"
               target="_blank"
               rel="noreferrer"
             >
+            {/* <button onClick={() => setShowDiscordPopup(true)}> */}
               <ButtonHover iconSize="1.2rem" icon={<BsDiscord />} />
+            {/* </button> */}
             </a>
             <a
               href={
@@ -73,7 +78,7 @@ function Navbar() {
             <Link to="/">
               <IKImage
                 urlEndpoint={"https://ik.imagekit.io/6pl7k4a01ha"}
-                path="ALIENSPHERE-head_aUSB3rrYqu0.png"
+                path="Logo3Small_KOc5W2vs8.png"
                 loading="lazy"
                 lqip={{ active: true }}
               />
@@ -84,7 +89,10 @@ function Navbar() {
             {/* <Link to="/marketplace" target="_blank">
               <ButtonHover iconSize="1.2rem" icon={<AiTwotoneShop />} />
             </Link> */}
-            <TriShapeButton title="Connect Wallet" />
+            {/* <TriShapeButton title="Connect Wallet" /> */}
+            <button className={`${styles.connect_wallet_btn} pointer fs-16px white weight-5 bg-purple-gradient ${styles.hover_gradient_effect}`}>
+              Connect Wallet
+            </button>
           </div>
         </div>
       </div>

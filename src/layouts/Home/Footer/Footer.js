@@ -1,13 +1,15 @@
-import React, { memo } from "react";
+import React, { memo, useContext } from "react";
 import "./Footer.css";
 import { FaTwitter } from "react-icons/fa";
 import { BsDiscord } from "react-icons/bs";
 import { IKImage } from "imagekitio-react";
+import DataContext from "context/DataContext";
 const ButtonHover = React.lazy(() =>
   import("components/Buttons/ButtonHover/ButtonHover")
 );
 
 function Footer() {
+  const {setShowDiscordPopup} = useContext(DataContext);
   return (
     <div>
       <div className="bg-purple-2">
@@ -31,13 +33,15 @@ function Footer() {
                 />
               </a>
 
-              <a href="https://discord.com/invite/YgeEwVa6Yn" target="_blank" rel="noreferrer">
+              {/* <button onClick={() => setShowDiscordPopup(true)}> */}
+              <a href="https://discord.com/invite/alnsphere" target="_blank" rel="noreferrer">
                 <ButtonHover
                   padding="14px"
                   iconSize="2.5rem"
                   icon={<BsDiscord />}
                 />
               </a>
+              {/* </button> */}
             </div>
           </div>
         </div>

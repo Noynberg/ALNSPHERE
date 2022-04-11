@@ -12,6 +12,7 @@ import TabPan from "components/Tabs/TabPan";
 // import Cards from "../MarketPlace/Cards";
 import Tab from "components/Tabs/Tab";
 import CardComponent from "components/CardComponent";
+import Popup from "./Popup";
 
 function Collection() {
   const { isFilterBarOpen, setIsFilterBarOpen } = useContext(
@@ -19,15 +20,17 @@ function Collection() {
   );
   const [isOpen, setIsOpen] = useState(false);
   const [activeTabIndexValue, setActiveTabIndexValue] = useState("Creatures");
-  const { searchInput, setSearchInput, checkboxes, setCheckboxes } =
+  const { searchInput, setSearchInput, checkboxes, setCheckboxes, showPopup, setShowPopup } =
     useContext(DataContext);
 
   let menuRef = OutsideClickDetector(() => {
     setIsFilterBarOpen(false);
   });
 
+
   return (
     <>
+      {showPopup ? <Popup setShowPopup = {setShowPopup} /> : null}
       <Tabs defaultTab={1}>
         <div className="market-place-nav">
           <div className="nav-center-wrap">

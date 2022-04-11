@@ -42,6 +42,9 @@
 .represents-btns > a:not(:last-child) {
   margin-right: 1rem;
 }
+.represents-btns button{
+  margin-right: 1rem;
+}
 
 .represents-left {
   flex: 0.8;
@@ -87,6 +90,7 @@
     margin-right: 0px;
     margin-bottom: 50px;
   }
+
 }
 
 @media (max-width: 500px) {
@@ -102,7 +106,10 @@
     margin-right: 0rem;
     margin-bottom: 1rem;
   }
-
+  .represents-btns > button {
+    margin-right: 0rem;
+    margin-bottom: 1rem;
+  }
   .represents-left {
     text-align: center;
   }

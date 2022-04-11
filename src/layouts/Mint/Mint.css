@@ -1,0 +1,121 @@
+
+.mint_container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.mint_video{
+    min-width: 100%;
+    min-height: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.mint_video.hidden{
+    display: none;
+}
+
+.mint_ship_container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.mint_ship_container .ship{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.mint_button{
+    position: absolute;
+    z-index: 3;
+    width: 10%;
+    height: 12%;
+    bottom: 10%;
+    right: 23%;
+    cursor: pointer;
+}
+
+.mint_button img{
+    width: 100%;
+    height: auto;
+}
+
+.mint_glow{
+    pointer-events: none;
+    position: absolute;
+    z-index: 3;
+    width: 20%;
+    height: 20%;
+    bottom: 7%;
+    right: 19%;
+    opacity: 0.7;
+}
+
+.mint_glow img{
+    width: 100%;
+    height: 100%;
+}
+
+.mint_glow.hidden{
+    display: none;
+}
+
+.mint_bulb_light{
+    pointer-events: none;
+    position: absolute;
+    z-index: 3;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.mint_left_display{
+    position: absolute;
+    z-index: 3;
+    width: 15%;
+    height: 21%;
+    bottom: 27.5%;
+    left: 4%;
+    opacity: 0.7;
+}
+
+.mint_left_display img{
+    width: 100%;
+    height: 100%;
+}
+
+
+.mint_back_button {
+    position: absolute;
+    z-index: 3;
+    width: 5%;
+    height: 5%;
+    top: 3%;
+    left: 2%;
+    cursor: pointer;
+}
+.mint_back_button img{
+    width: 100%;
+    height: auto;
+}
+
+
+@media screen and (max-width: 1000px) {
+    .mint_back_button{
+        width: 50px;
+        height: 50px;
+    }
+}

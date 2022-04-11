@@ -1,12 +1,14 @@
-import React, { memo } from "react";
+import React, { memo, useContext } from "react";
 import "./NFT.css";
 import { BsDiscord } from "react-icons/bs";
 import { IKImage } from "imagekitio-react";
+import DataContext from "context/DataContext";
 const TriShapeButton = React.lazy(() =>
   import("components/Buttons/TriShapeButton/TriShapeButton")
 );
 
 function NFT() {
+  const {setShowDiscordPopup} = useContext(DataContext);
   return (
     <div className="nft-wrapper ">
       <div className="container-wrapper  nft">
@@ -17,7 +19,8 @@ function NFT() {
             and don’t miss any announcements.
           </p>
 
-          <a href="https://discord.com/invite/YgeEwVa6Yn" target="_blank" rel="noreferrer">
+          <a href="https://discord.com/invite/alnsphere" target="_blank" rel="noreferrer">
+          {/* <button onClick={() => setShowDiscordPopup(true)}> */}
             <TriShapeButton
               title="Join Discord"
               icon={
@@ -29,13 +32,14 @@ function NFT() {
                 </span>
               }
             />
+          {/* </button> */}
           </a>
         </div>
         <div className="nft-right">
           {/* <img src={nftImg} alt="" /> */}
           <IKImage
             urlEndpoint={"https://ik.imagekit.io/6pl7k4a01ha"}
-            path="AlnGifcc_WMs0RIwgs.gif"
+            path="/Attachment_1645534992_7sEljnkBC1Lr.gif"
             loading="lazy"
             lqip={{ active: true }}
           />

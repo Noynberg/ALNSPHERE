@@ -14,6 +14,7 @@ function Gallery() {
     <div className="gallery-wrapper">
       <div className="gallery-botom"></div>
       <div className="container-wrapper gallery py-100px">
+ 
         <Title
           title="Gallery"
           className="text-center  fs-46px weight-7 uppercase mb-60px"
@@ -38,20 +39,21 @@ function Gallery() {
             pagination={{ clickable: true }}
             className="mySwiper"
           >
-            <SwiperSlide>
+
+           <SwiperSlide>
               <IKImage
                 urlEndpoint={"https://ik.imagekit.io/6pl7k4a01ha"}
-                path="gallery-img-1_s0u8Jx5dR.png"
+                path="/Attachment_1643911967_PZuK18GrW.gif"
                 loading="lazy"
                 lqip={{ active: true }}
               />
-
+              
               {/* <img src={galleryImg1} alt="img" /> */}
             </SwiperSlide>
             <SwiperSlide>
               <IKImage
                 urlEndpoint={"https://ik.imagekit.io/6pl7k4a01ha"}
-                path="gallery-img-2_xO_bVzpBL.png"
+                path="/gallery/1-min_ovmrBeLza.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645588217009"
                 loading="lazy"
                 lqip={{ active: true }}
               />
@@ -61,7 +63,7 @@ function Gallery() {
             <SwiperSlide>
               <IKImage
                 urlEndpoint={"https://ik.imagekit.io/6pl7k4a01ha"}
-                path="gallery-img-3_uHa2RrSfe.png"
+                path="/gallery/2-min_-7neZlrDF.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645588218223"
                 loading="lazy"
                 lqip={{ active: true }}
               />
@@ -71,7 +73,7 @@ function Gallery() {
             <SwiperSlide>
               <IKImage
                 urlEndpoint={"https://ik.imagekit.io/6pl7k4a01ha"}
-                path="gallery-img-4_bwL9hHWOEmn.png"
+                path="/gallery/3-min_b9Bv8zh05O60.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645588217018"
                 loading="lazy"
                 lqip={{ active: true }}
               />
@@ -81,7 +83,7 @@ function Gallery() {
             <SwiperSlide>
               <IKImage
                 urlEndpoint={"https://ik.imagekit.io/6pl7k4a01ha"}
-                path="gallery-img-5_nt0Fte19H.png"
+                path="/gallery/4-min_FXII-jrLJ.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645588219138"
                 loading="lazy"
                 lqip={{ active: true }}
               />
@@ -91,7 +93,7 @@ function Gallery() {
             <SwiperSlide>
               <IKImage
                 urlEndpoint={"https://ik.imagekit.io/6pl7k4a01ha"}
-                path="Randomized7_xSFGqBzuYKb.png"
+                path="/gallery/5-min_rwjJkx_7Icf_.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645588218661"
                 loading="lazy"
                 lqip={{ active: true }}
               />
@@ -99,9 +101,10 @@ function Gallery() {
               {/* <img src={galleryImg5} alt="img" /> */}
             </SwiperSlide>
             <SwiperSlide>
+
               <IKImage
                 urlEndpoint={"https://ik.imagekit.io/6pl7k4a01ha"}
-                path="Randomized5_d46hfOQky.png"
+                path= "/gallery/6-min_yzMc2fQKOJ-c.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645588218210"
                 loading="lazy"
                 lqip={{ active: true }}
               />

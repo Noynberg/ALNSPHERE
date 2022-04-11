@@ -7,9 +7,12 @@ import Dashboard from "layouts/Marketplace/Dashboard/Dashboard";
 // import questionMark from "assets/images/question-mark.png";
 // import CardComponent from "components/CardComponent";
 import DataContextProvider from "context/DataContextProvider";
+import WalletAddress from "pages/WalletAddress/WalletAddress";
+import MintPage from "pages/MintPage/MintPage";
 
 const RandomPage = React.lazy(() => import("pages/RandomPage/RandomPage"));
 const RiddlePage = React.lazy(() => import("pages/RiddlePage/RiddlePage"));
+const GamePage = React.lazy(() => import("pages/GamePage/GamePage"));
 const Home = React.lazy(() => import("pages/Home/Home"));
 
 const AlnSphereCreatures = React.lazy(() =>
@@ -30,6 +33,30 @@ function App() {
               }
           />
           <Route
+            path="/mint"
+            element={
+              <Suspense fallback={<div />}>
+                <MintPage />
+              </Suspense>
+              }
+          />
+          <Route
+            path="/game"
+            element={
+              <Suspense fallback={<div />}>
+                <GamePage />
+              </Suspense>
+              }
+          />
+          <Route
+            path="/walletaddress"
+            element={
+              <Suspense fallback={<div />}>
+                <WalletAddress />
+              </Suspense>
+              }
+          />
+          <Route
             path="/marketplace"
             element={
               <Suspense fallback={<div />}>
@@ -37,6 +64,7 @@ function App() {
               </Suspense>
             }
           >
+            
             <Route path="collection" element={<Collection />}></Route>
             <Route path="gallery" element={<Gallery />} />
             <Route path="dashboard" element={<Dashboard />} />

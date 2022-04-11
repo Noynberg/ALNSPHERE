@@ -7415,6 +7415,11 @@
   "resolved" "https://registry.npmjs.org/merge-descriptors/-/merge-descriptors-1.0.1.tgz"
   "version" "1.0.1"
 
+"merge-images@^2.0.0":
+  "integrity" "sha512-bpI4j54n/Zl6ZTgxaR3xWou/lqI53RAAt8peXijW37BKqoON83LQ7XCZqtFiwzBfEXIws1isYyR06584yffAyA=="
+  "resolved" "https://registry.npmjs.org/merge-images/-/merge-images-2.0.0.tgz"
+  "version" "2.0.0"
+
 "merge-stream@^2.0.0":
   "integrity" "sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w=="
   "resolved" "https://registry.npmjs.org/merge-stream/-/merge-stream-2.0.0.tgz"
@@ -9542,6 +9547,11 @@
   "resolved" "https://registry.npmjs.org/react-three-fiber/-/react-three-fiber-0.0.0-deprecated.tgz"
   "version" "0.0.0-deprecated"
 
+"react-unity-webgl@^8.8.0":
+  "integrity" "sha512-4PHTEwUQd70IJAy+jdVvHM+A6No9GMTmA/PCFOWkgpy2g0SlKJF3LREt92TfhttnMJ+CLL9iF8X03wMBvNvsjA=="
+  "resolved" "https://registry.npmjs.org/react-unity-webgl/-/react-unity-webgl-8.8.0.tgz"
+  "version" "8.8.0"
+
 "react-url-image-downloader@^1.0.2":
   "integrity" "sha512-7BMYIZnsgWTr4AqpQqJ7lJGNsQ67SxIeREp2jytQnopxcUk8eLyqOHj3r+cKyTnGroS8rb4o0GPFjTkBvENlAg=="
   "resolved" "https://registry.npmjs.org/react-url-image-downloader/-/react-url-image-downloader-1.0.2.tgz"
@@ -9554,7 +9564,7 @@
   dependencies:
     "debounce" "^1.2.1"
 
-"react@*", "react@^0.14.0 || ^15.0.0 || ^16 || ^17", "react@^15.3.0 || ^16.0.0", "react@^16.13.1 || ^17.0.0", "react@^17.0.2", "react@>= 16", "react@>=16.13", "react@>=16.8", "react@>=17.0", "react@16.x || 17.x", "react@17.0.2":
+"react@*", "react@^0.14.0 || ^15.0.0 || ^16 || ^17", "react@^15.3.0 || ^16.0.0", "react@^16.13.1 || ^17.0.0", "react@^17.0.2", "react@>= 16", "react@>=16.13", "react@>=16.8", "react@>=16.8.0", "react@>=17.0", "react@16.x || 17.x", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"

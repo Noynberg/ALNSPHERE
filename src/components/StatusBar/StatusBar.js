@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./StatusBar.module.css";
-
+import DataContext from "context/DataContext";
 import ethereumIcon from "assets/images/ethereum-2.png";
 import alien from "assets/images/alien.png";
 import ufo from "assets/images/ufo-3.png";
@@ -37,26 +37,7 @@ const Card = ({ title, value, img }) => {
 };
 
 function StatusBar() {
-  const [ETHRate, setETHRate ] = React.useState(3180);
-
-  React.useEffect(() => {
-    fetch("https://api.coinbase.com/v2/exchange-rates?currency=ETH")
-      .then((res) => res.json())
-      .then(
-        (result) => {
-          setETHRate(result.data.rates.USD);
-          console.log(result.data.rates.USD);
-        },
-        // Note: it's important to handle errors here
-        // instead of a catch() block so that we don't swallow
-        // exceptions from actual bugs in components.
-        (error) => {
-          console.log(error);
-        }
-      );
-  }, []);
-
-  // console.log(ETHRate);
+  const {ETHRate} = React.useContext(DataContext);
 
   return (
     <Tabs defaultTab="24h">

@@ -121,9 +121,9 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #000;
+  background-color: #33135b;
   color: white;
-  z-index: 989;
+  z-index: 1001;
   display: flex;
   align-items: center;
   justify-content: center;

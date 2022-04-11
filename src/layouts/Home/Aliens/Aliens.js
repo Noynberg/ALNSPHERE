@@ -56,7 +56,7 @@ function Aliens() {
             <SwiperSlide>
               <IKImage
                 urlEndpoint={"https://ik.imagekit.io/6pl7k4a01ha"}
-                path="JokerGold_zJBhSGSabsB.png"
+                path="/choosenOnes/Alns_Gladiator_ItemsX-min_7I0MPrsEtJhF.png"
                 loading="lazy"
                 lqip={{ active: true }}
               />
@@ -65,7 +65,7 @@ function Aliens() {
             <SwiperSlide>
               <IKImage
                 urlEndpoint={"https://ik.imagekit.io/6pl7k4a01ha"}
-                path="HarryGold_z3BREk4he.png"
+                path="/choosenOnes/Alns_Astronaut_ItemsX-min_Q0_MbSq7X.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645708851057"
                 loading="lazy"
                 lqip={{ active: true }}
               />
@@ -75,7 +75,7 @@ function Aliens() {
             <SwiperSlide>
               <IKImage
                 urlEndpoint={"https://ik.imagekit.io/6pl7k4a01ha"}
-                path="Alnaut_iz9RHfLdTsLm.png"
+                path="/choosenOnes/Alns_Joker_ItemsX-min_BnIa2yMO8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645708851710"
                 loading="lazy"
                 lqip={{ active: true }}
               />
@@ -84,7 +84,7 @@ function Aliens() {
             <SwiperSlide>
               <IKImage
                 urlEndpoint={"https://ik.imagekit.io/6pl7k4a01ha"}
-                path="Blur7_kMPzUjBAFiY.jpg"
+                path="/choosenOnes/Alns_Harry_Potter_ItemsX-min_nrjeoCLg-.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645708850136"
                 loading="lazy"
                 lqip={{ active: true }}
               />
@@ -93,7 +93,7 @@ function Aliens() {
             <SwiperSlide>
               <IKImage
                 urlEndpoint={"https://ik.imagekit.io/6pl7k4a01ha"}
-                path="Blur6_SyjlgIuY6.jpg"
+                path="/choosenOnes/image_-CjYJO4EVYQ_.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645708855532"
                 loading="lazy"
                 lqip={{ active: true }}
               />
@@ -102,7 +102,7 @@ function Aliens() {
             <SwiperSlide>
               <IKImage
                 urlEndpoint={"https://ik.imagekit.io/6pl7k4a01ha"}
-                path="Blur5_jWm5SlNL0.jpg"
+                path="/choosenOnes/image_1__KzJTk4_hi.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645708854360"
                 loading="lazy"
                 lqip={{ active: true }}
               />
@@ -111,7 +111,7 @@ function Aliens() {
             <SwiperSlide>
               <IKImage
                 urlEndpoint={"https://ik.imagekit.io/6pl7k4a01ha"}
-                path="Blur4_ghT_sgczLIE.jpg"
+                path="/choosenOnes/image_2__sPBth-QKK.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645708853647"
                 loading="lazy"
                 lqip={{ active: true }}
               />
@@ -120,7 +120,7 @@ function Aliens() {
             <SwiperSlide>
               <IKImage
                 urlEndpoint={"https://ik.imagekit.io/6pl7k4a01ha"}
-                path="Blur3_S7Zo33cHJ.jpg"
+                path="/choosenOnes/image_3__ftX1NsoXl.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645708853688"
                 loading="lazy"
                 lqip={{ active: true }}
               />
@@ -129,7 +129,7 @@ function Aliens() {
             <SwiperSlide>
               <IKImage
                 urlEndpoint={"https://ik.imagekit.io/6pl7k4a01ha"}
-                path="Gladiator_t35QIQ5pA.png"
+                path="/choosenOnes/Alns_IronMan_ItemsX-min_K8kwXNwdk.png?ik-sdk-version=javascript-1.4.3&updatedAt=1645708852098"
                 loading="lazy"
                 lqip={{ active: true }}
               />

@@ -1,12 +1,14 @@
-import React, { memo } from "react";
+import React, { memo, useContext } from "react";
 import "./Represents.css";
 import { BsDiscord } from "react-icons/bs";
 import { IKImage } from "imagekitio-react";
+import DataContext from "context/DataContext";
 const TriShapeButton = React.lazy(() =>
   import("components/Buttons/TriShapeButton/TriShapeButton")
 );
 
 function Represents() {
+  const {setShowDiscordPopup} = useContext(DataContext);
   return (
     <div className="represents-wrapper ">
       <div className="container-wrapper">
@@ -32,7 +34,8 @@ function Represents() {
             </p>
 
             <div className="represents-btns">
-              <a href="https://discord.com/invite/YgeEwVa6Yn" target="_blank" rel="noreferrer">
+              <a href="https://discord.com/invite/alnsphere" target="_blank" rel="noreferrer">
+              {/* <button onClick={() => setShowDiscordPopup(true)}> */}
                 <TriShapeButton
                   title="Join Discord"
                   icon={
@@ -44,6 +47,7 @@ function Represents() {
                     </span>
                   }
                 />
+              {/* </button> */}
               </a>
               <a
                 href={
