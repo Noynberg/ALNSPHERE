@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './Mint.css';
 import starsFast from '../../assets/videos/starsFast.webm';
-import starsSlow from '../../assets/videos/starsSlow.webm';
+import starsSlow from '../../assets/videos/starsSlow_Trim.mp4';
 import ship from '../../assets/images/mint/ship.png';
 import leftDisplay from '../../assets/images/mint/Left_Display.png';
 import BackButton from '../../assets/images/mint/Back_Button.png';
