@@ -43,7 +43,7 @@ const Mint = () => {
                     <source src={starsFast} type="video/mp4"/>
                 </video>
     
-                <video className='mint_video mint_video_starsSlow' muted playsInline = {true} autoPlay = {true} loop = {true} id = 'video_starsSlow'>
+                <video className='mint_video mint_video_starsSlow' muted controls = {true} playsInline = {true} autoPlay = {true} loop = {true} id = 'video_starsSlow'>
                     <source src={starsSlow} type="video/mp4"/>
                 </video>
           
