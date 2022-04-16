@@ -20,7 +20,7 @@ export const roadmapData = [
 
   {
     title: "stage",
-    discContent: ["◆ Spheroxy invasions", "◆ New abilities", "◆ 3D modelling"],
+    discContent: ["◆ Spheroxy invasions", "◆ New abilities", "◆ 3D modelling", "◆ Game release",],
   },
 
   {
@@ -28,6 +28,7 @@ export const roadmapData = [
     discContent: [
       "◆ Sphererocks Token (ERC-20)",
       "◆ NFT staking (website) with rewards",
+      "◆ Aln staking",
     ],
   },
 
@@ -43,8 +44,7 @@ export const roadmapData = [
   {
     title: "stage",
     discContent: [
-      "◆ Game demo release",
-      "◆ Aln staking",
+      
       "◆ Dungeons / PvP / PvE / Quests / Guilds",
       "◆ Airdrops for holders (items/gems/potions)",
     ],

@@ -1,12 +1,25 @@
 
 .mint_container{
     height: 100vh;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 
 
+div.hidden{
+    display: none;
+}
+
+
+.mint_video_container{
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
 
 .mint_video{
     min-width: 100%;
@@ -112,10 +125,45 @@
     height: auto;
 }
 
+.mine_right_light{
+    position: absolute;
+    z-index: 3;
+    right: 21%;
+    bottom: 17%;
+    width: 23%;
+    height: 33%;
+}
 
-@media screen and (max-width: 1000px) {
+.mine_right_light img{
+    width: 100%;
+    height: auto;
+}
+
+
+#ship_mobile{
+    display: none;
+}
+
+
+@media screen and (max-aspect-ratio: 1/1) {
     .mint_back_button{
         width: 50px;
         height: 50px;
     }
+    .mint_left_display {
+        display: none;
+    }
+    #ship_mobile{
+        display: block;
+    }
+    #ship_desktop{
+        display: none;
+    }
+    .mint_button{
+        width: 16%;
+        height: 14%;
+        bottom: 21%;
+        right: 6%;
+    }
 }
+

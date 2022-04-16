@@ -1,15 +1,17 @@
 
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { IKImage } from "imagekitio-react";
 import './Mint.css';
-import starsFast from '../../assets/videos/starsFast.webm';
-import starsSlow from '../../assets/videos/starsSlow_Trim.mp4';
-import ship from '../../assets/images/mint/ship.png';
+import starsFast from '../../assets/videos/starsFast.mp4';
+import starsSlow from '../../assets/videos/starsSlow.mp4';
+// import ship from '../../assets/images/mint/ship.png';
 import leftDisplay from '../../assets/images/mint/Left_Display.png';
 import BackButton from '../../assets/images/mint/Back_Button.png';
 import MintButton from '../../assets/images/mint/mint_button.png';
 import BulbLight from '../../assets/images/mint/Bulb_Light.png';
 import MintGlow from '../../assets/images/mint/Mint_Glow.png';
+import RightLight from '../../assets/images/mint/Right_Light.png';
 
 const Mint = () => {
 
@@ -18,7 +20,8 @@ const Mint = () => {
     const mintClick = () => {
 
         if(minting){
-            document.getElementById('mint_glow').classList.add('hidden');
+            // document.getElementById('mint_glow').classList.add('hidden');
+            document.getElementById('mint_right_light').classList.add('hidden');
             document.getElementById('video_starsFast').classList.add('hidden');
             document.getElementById('video_starsSlow').classList.remove('hidden');
             setMinting(false);
@@ -26,7 +29,8 @@ const Mint = () => {
         else{
             document.getElementById('video_starsFast').classList.remove('hidden');
             document.getElementById('video_starsSlow').classList.add('hidden');
-            document.getElementById('mint_glow').classList.remove('hidden');
+            document.getElementById('mint_right_light').classList.remove('hidden');
+            // document.getElementById('mint_glow').classList.remove('hidden');
             setMinting(true);
         }
 
@@ -43,7 +47,7 @@ const Mint = () => {
                     <source src={starsFast} type="video/mp4"/>
                 </video>
     
-                <video className='mint_video mint_video_starsSlow' muted controls = {true} playsInline = {true} autoPlay = {true} loop = {true} id = 'video_starsSlow'>
+                <video className='mint_video mint_video_starsSlow' muted  playsInline = {true} autoPlay = {true} loop = {true} id = 'video_starsSlow'>
                     <source src={starsSlow} type="video/mp4"/>
                 </video>
           
@@ -51,7 +55,24 @@ const Mint = () => {
 
             <div className='mint_ship_container'>
 
-                <img src = {ship} alt = 'ship' className='ship'/>
+                <IKImage
+                    urlEndpoint={"https://ik.imagekit.io/6pl7k4a01ha"}
+                    path="/Mint/shipDesktop_xgAPp_BbR.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650122562356"
+                    loading="lazy"
+                    lqip={{ active: true }}
+                    className='ship'
+                    id = 'ship_desktop'
+                />
+
+                <IKImage
+                    urlEndpoint={"https://ik.imagekit.io/6pl7k4a01ha"}
+                    path="/Mint/shipmobile-min_PakOF4NAv.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650123010425"
+                    loading="lazy"
+                    lqip={{ active: true }}
+                    className='ship'
+                    id = 'ship_mobile'
+                />
+                {/* <img src = 'https://ik.imagekit.io/6pl7k4a01ha/Mint?ik-sdk-version=javascript-1.4.3&updatedAt=1650122562356' alt = 'ship' className='ship'/> */}
 
                 <button className='mint_button' onClick = {mintClick}>
                     <img src = {MintButton} alt = 'mintbutton' />
@@ -63,6 +84,10 @@ const Mint = () => {
 
                 <div className='mint_left_display ' id = 'mint_left_display'>
                     <img src = {leftDisplay} alt = 'leftdisplay' />
+                </div>
+
+                <div className='mint_right_light' id = 'mint_right_light'>
+                    <img src = {RightLight} alt = 'leftdisplay' />
                 </div>
 
                 <Link to = '/' className='mint_back_button'>
