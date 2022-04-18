@@ -17,7 +17,7 @@ function Represents() {
             <p className="fs-46px weight-7 white mb-60px">
               AlnSphere represents an NFT collection of
               <br />
-              <span className="pink">9999 unique Aliens</span>
+              <span className="pink">from the multiverse</span>
             </p>
             <p className="fs-18px white weight-7 lh-30px mb-20px">
               Since the Alns have been created on planet Spheron, the Spheroxy
@@ -27,10 +27,7 @@ function Represents() {
             </p>
 
             <p className="fs-18px white weight-7 lh-30px mb-60px">
-              Our collection of 9,999 NFTs comes with a variety of over 150
-              hand-drawn traits. Each Aln has been created with quality in mind
-              to ensure uniqueness in art, and is ready to storm the Ethereum
-              blockchain.
+              Our collection of 9,999 NFTs comes with 6,666 2D NFTs and 3,333 3D NFTs which are either claimable for free or by burning $SROCKS.
             </p>
 
             <div className="represents-btns">

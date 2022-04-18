@@ -12,6 +12,9 @@ const Represents = React.lazy(() =>
   import("layouts/Home/Represents/Represents")
 );
 const Gallery = React.lazy(() => import("layouts/Home/Gallery/Gallery"));
+const RGBCards = React.lazy(() =>
+  import("layouts/Home/RGBCards/RGBCards")
+);
 const PlayToEarn = React.lazy(() =>
   import("layouts/Home/PlayToEarn/PlayToEarn")
 );
@@ -83,6 +86,9 @@ function Home() {
       <div className="play-gallery-bg">
         <Suspense fallback={<div />}>
           <PlayToEarn />
+        </Suspense>
+        <Suspense fallback={<div />}>
+          <RGBCards />
         </Suspense>
         <Suspense fallback={<div />}>
           <Aliens />

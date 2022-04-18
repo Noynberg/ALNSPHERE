@@ -42,22 +42,32 @@ div.hidden{
     height: 100%;
 }
 
-.mint_ship_container .ship{
+.ship{
+    position: relative;
+    height: 100%;
+    /* width: 100%; */
+    background-size: auto 100vh;
+    background-position: center;
+    background-image: url('https://ik.imagekit.io/6pl7k4a01ha/Mint/shipDesktop_xgAPp_BbR.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650122562356');
+    background-repeat: no-repeat;
+}
+
+/* .mint_ship_container .ship{
     position: absolute;
     z-index: 2;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-}
+} */
 
 .mint_button{
     position: absolute;
     z-index: 3;
-    width: 10%;
+    width: 20vh;
     height: 12%;
-    bottom: 10%;
-    right: 23%;
+    bottom: 11%;
+    right: calc(50vw - 49vh);
     cursor: pointer;
 }
 
@@ -145,6 +155,7 @@ div.hidden{
 }
 
 
+
 @media screen and (max-aspect-ratio: 1/1) {
     .mint_back_button{
         width: 50px;
@@ -153,11 +164,14 @@ div.hidden{
     .mint_left_display {
         display: none;
     }
-    #ship_mobile{
+    /* #ship_mobile{
         display: block;
     }
     #ship_desktop{
         display: none;
+    } */
+    .ship{
+        background-image: url('https://ik.imagekit.io/6pl7k4a01ha/Mint/shipmobile-min_PakOF4NAv.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650123010425');
     }
     .mint_button{
         width: 16%;

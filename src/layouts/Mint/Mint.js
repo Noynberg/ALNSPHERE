@@ -55,7 +55,7 @@ const Mint = () => {
 
             <div className='mint_ship_container'>
 
-                <IKImage
+                {/* <IKImage
                     urlEndpoint={"https://ik.imagekit.io/6pl7k4a01ha"}
                     path="/Mint/shipDesktop_xgAPp_BbR.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650122562356"
                     loading="lazy"
@@ -71,7 +71,8 @@ const Mint = () => {
                     lqip={{ active: true }}
                     className='ship'
                     id = 'ship_mobile'
-                />
+                /> */}
+                <div className='ship'></div>
                 {/* <img src = 'https://ik.imagekit.io/6pl7k4a01ha/Mint?ik-sdk-version=javascript-1.4.3&updatedAt=1650122562356' alt = 'ship' className='ship'/> */}
 
                 <button className='mint_button' onClick = {mintClick}>
@@ -82,9 +83,9 @@ const Mint = () => {
                     <img src = {MintGlow} alt = 'mintglow' />
                 </div>
 
-                <div className='mint_left_display ' id = 'mint_left_display'>
+                {/* <div className='mint_left_display ' id = 'mint_left_display'>
                     <img src = {leftDisplay} alt = 'leftdisplay' />
-                </div>
+                </div> */}
 
                 <div className='mint_right_light' id = 'mint_right_light'>
                     <img src = {RightLight} alt = 'leftdisplay' />
