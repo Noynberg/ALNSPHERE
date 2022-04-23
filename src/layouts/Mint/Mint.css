@@ -171,13 +171,14 @@ div.hidden{
         display: none;
     } */
     .ship{
-        background-image: url('https://ik.imagekit.io/6pl7k4a01ha/Mint/shipmobile-min_PakOF4NAv.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650123010425');
+        background-image: url('https://ik.imagekit.io/6pl7k4a01ha/Mint/mobile_bg-min_b3Mk2MPef.png?ik-sdk-version=javascript-1.4.3&updatedAt=1650681940802');
     }
     .mint_button{
         width: 16%;
         height: 14%;
         bottom: 21%;
         right: 6%;
+        display: none;
     }
 }
 
