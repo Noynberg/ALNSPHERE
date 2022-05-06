@@ -6,17 +6,18 @@ const RGBCards = () => {
 
     return(
         <div className='rgb-cards'>
-            <RGBCard href = '/marketplace/collection' title = 'Marketplace' 
+            <RGBCard href = '/marketplace/collection' title = 'MARKETPLACE' 
                 imagepath = '/rbgcards/Marketplace__wlCYV1JED.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1650719214241' 
-                description = 'Lorem ipsum dolor sit demoise amet consectetur, Ducimusele, repudiandae temporibus omnis illum maxime quod deserunt eligendi dolor' 
+                description = {`Start your own business and Buy/Sell items in the grand hall.
+                Search for the items you need to equip your ALN with different rarities and stats.`}
             />
-            <RGBCard href = '/' title = 'Partnership' 
+            <RGBCard href = 'https://netvrk.medium.com/netvrk-partners-with-alnsphere-3c67c1628f8' title = 'NETVRK PARTNER' 
                 imagepath = '/rbgcards/Partnership_zHxHhEoPi.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1650719210586' 
-                description = 'Lorem ipsum dolor sit demoise amet consectetur, Ducimusele, repudiandae temporibus omnis illum maxime quod deserunt eligendi dolor' 
+                description = {`AlnSphere will be entering the Netvrk Metaverse in style with it’s own virtual headquarters and metaverse integrations. AlnSphere features fully rigged 3D models, ready for Play to Earn games, and general metaverse mischief.`}
             />
-            <RGBCard href = '/game' title = 'Gameplay' 
+            <RGBCard href = '/game' title = 'ALNSPHERE GAME' soon={true}
                 imagepath = '/rbgcards/GamePlay_Z8vKL5N6g.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1650719203243' 
-                description = 'Lorem ipsum dolor sit demoise amet consectetur, Ducimusele, repudiandae temporibus omnis illum maxime quod deserunt eligendi dolor' 
+                description = {`Demo version release. Testing the first functionalities in the AlnSphere P2E RPG game. Play and Earn, claim daily rewards, equip your ALN and challenge other ALN's to win the prize pool!`}
             />
             {/* <div className='card-container'>
                 <div class="card">
