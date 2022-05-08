@@ -1,5 +1,5 @@
 .hero {
-
+  
   .mobile-header-text {
     font-size: 3.5rem;
     color: white;
@@ -294,6 +294,7 @@ $shooting-time: 3000ms;
     background-position: center center;
     background-repeat: no-repeat;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
   }
@@ -337,6 +338,24 @@ $shooting-time: 3000ms;
     z-index: 1;
     margin-bottom: 40px;
   }
+
+  .hero_open_teaser_modal_btn{
+    margin-top: 2rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  .hero_open_teaser_modal_btn:hover{
+    transform: scale(1.1);
+  }
+  .hero_open_teaser_modal_btn svg{
+    color: #157ded;
+    background-color: white;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+  }
+
+
 }
 
 .Hero-btn {

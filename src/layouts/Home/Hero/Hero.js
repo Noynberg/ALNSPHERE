@@ -73,8 +73,7 @@ const TriShapeButton = React.lazy(() =>
 
 function HeroFadeImg() {
   let parallax_element = useRef(null);
-  const {setShowDiscordPopup} =
-  useContext(DataContext);
+  const {setShowTeaserModal} = useContext(DataContext);
 
   useEffect(() => {
     function parallax(event) {
@@ -233,6 +232,11 @@ function HeroFadeImg() {
       <div className="mobile-parallax-holder">
         <div className="mobile_hero">
           <h1 id = 'glitch_text' className="glitched_text mobile-header-text">Alnsphere</h1>
+          <button className='hero_open_teaser_modal_btn' onClick = {() => setShowTeaserModal(true)}>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 512 512">
+              <path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm115.7 272l-176 101c-15.8 8.8-35.7-2.5-35.7-21V152c0-18.4 19.8-29.8 35.7-21l176 107c16.4 9.2 16.4 32.9 0 42z"/>
+            </svg>
+          </button>
         </div>
         {/* <div className="glitch_image">
           <h1 id = 'glitch_text' className="glitched_text">Alnsphere</h1>

@@ -24,6 +24,7 @@ const Team = React.lazy(() => import("layouts/Home/Team/Team"));
 const Faq = React.lazy(() => import("layouts/Home/Faq/Faq"));
 const NFT = React.lazy(() => import("layouts/Home/NFT/NFT"));
 const Footer = React.lazy(() => import("layouts/Home/Footer/Footer"));
+const Teaser = React.lazy(() => import("layouts/Home/Teaser/Teaser"));
 const DiscordPopup = React.lazy(() => import("layouts/Home/DiscordPopup/DiscordPopup"));
 
 function Home() {
@@ -78,6 +79,9 @@ function Home() {
       </Suspense>
       <Suspense fallback={<div />}>
         <Represents />{" "}
+      </Suspense>
+      <Suspense fallback={<div />}>
+        <Teaser />{" "}
       </Suspense>
       <Suspense fallback={<div />}>
         <Gallery />{" "}

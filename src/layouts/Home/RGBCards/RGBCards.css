@@ -57,12 +57,13 @@
   font-size: 28px;
   transition: all 0.75s ease-out;
   margin-bottom: 1rem;
+  color: #bf5eca;
 }
 .cardContainer .cardBox .cardDetails p {
   font-size: 14px;
   text-transform: uppercase;
   margin-bottom: 1rem;
-  color: #c3c3c3;
+  color: white;
   font-weight: 300;
   transition: all 0.75s ease-out;
 }

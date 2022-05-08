@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import DataContext from "./DataContext";
 
 function DataContextProvider(props) {
@@ -8,6 +8,7 @@ function DataContextProvider(props) {
   const [cardLayout, setCardLayout] = useState("Columns");
   const [searchInput, setSearchInput] = useState("");
   const [showPopup, setShowPopup] = useState(true);
+  const [showTeaserModal, setShowTeaserModal] = useState(false);
   const [showDiscordPopup, setShowDiscordPopup] = useState(false);
   const [checkboxes, setCheckboxes] = useState({
     alns: false,
@@ -55,6 +56,8 @@ function DataContextProvider(props) {
         setShowPopup,
         showDiscordPopup,
         setShowDiscordPopup,
+        showTeaserModal,
+        setShowTeaserModal,
       }}
     >
       {props.children}
