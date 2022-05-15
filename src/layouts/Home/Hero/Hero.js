@@ -1,4 +1,5 @@
 import React, { useRef,  useEffect, memo, useContext } from "react";
+import { Link } from 'react-router-dom';
 // import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import "./ImageFadeMaterial";
 // import { TextureLoader, MathUtils } from "three";
@@ -164,18 +165,19 @@ function HeroFadeImg() {
   return (
     <section className="hero">
       <div className="Hero-btn">
-        <a href="https://discord.com/invite/alnsphere" target="_blank" rel="noreferrer">
-        {/* <button onClick={() => setShowDiscordPopup(true)}> */}
-          <TriShapeButton
-            title="Join Discord"
+        {/* <a href="https://discord.com/invite/alnsphere" target="_blank" rel="noreferrer">
+          <TriShapeButton title="Join Discord"
             icon={
               <span className="white icon-button" style={{ fontSize: "18px" }}>
                 <BsDiscord />
               </span>
             }
           />
-        {/* </button> */}
-        </a>
+        </a> */}
+        <Link to="/mint" target="_blank" rel="noreferrer">
+          <TriShapeButton title="Mint" />
+        </Link>
+
       </div>
       {/* <div className="canvas-container">
         <Canvas
