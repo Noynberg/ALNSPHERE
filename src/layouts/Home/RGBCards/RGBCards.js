@@ -15,7 +15,7 @@ const RGBCards = () => {
                 imagepath = '/rbgcards/Partnership_zHxHhEoPi.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1650719210586' 
                 description = {`AlnSphere will be entering the Netvrk Metaverse in style with it’s own virtual headquarters and metaverse integrations. AlnSphere features fully rigged 3D models, ready for Play to Earn games, and general metaverse mischief.`}
             />
-            <RGBCard href = '/game' title = 'ALNSPHERE GAME' 
+            <RGBCard href = '/game' title = 'GLORY OF SPHERON' 
                 imagepath = '/rbgcards/GamePlay_Z8vKL5N6g.gif?ik-sdk-version=javascript-1.4.3&updatedAt=1650719203243' 
                 description = {`Demo version release. Testing the first functionalities in the AlnSphere P2E RPG game. Play and Earn, claim daily rewards, equip your ALN and challenge other ALN's to win the prize pool!`}
             />
