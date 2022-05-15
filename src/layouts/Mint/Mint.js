@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { IKImage } from "imagekitio-react";
+import Countdown from 'react-countdown';
 import './Mint.css';
 import starsFast from '../../assets/videos/starsFast.mp4';
 import starsSlow from '../../assets/videos/starsSlow.mp4';
@@ -49,9 +50,29 @@ const Mint = () => {
             setCounter(prev => prev - 1);
         }
     }
-    
+
+
+    // Renderer callback with condition
+    const renderer = ({days, hours, minutes, seconds, completed }) => {
+        if (completed) {
+        // Render a completed state
+        return <h2>Coming Soon</h2>
+        } else {
+        // Render a countdown
+        return <h2>{days} days, {hours}:{minutes}:{seconds}</h2>;
+        }
+    };
 
     return (
+        <>
+        <div className='mint_overlay'>
+            <Link to = '/'>
+                <svg xmlns="http://www.w3.org/2000/svg" fill='currentColor' viewBox="0 0 256 512">
+                    <path d="M31.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L127.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L201.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34z"/>
+                </svg>
+            </Link>
+            <h2> <Countdown date={'2023-05-30T01:02:03'} renderer={renderer} /> </h2>
+        </div>
         <div className="mint_container">
 
         
@@ -101,6 +122,7 @@ const Mint = () => {
             </div>
 
         </div>
+        </>
     )
 }
 
