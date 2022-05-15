@@ -75,7 +75,6 @@ const Mint = () => {
         </div>
         <div className="mint_container">
 
-        
             <div className='mint_ship_container'>
 
                 <div className='mint_video_container'>                
