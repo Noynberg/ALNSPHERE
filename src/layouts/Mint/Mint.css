@@ -34,7 +34,7 @@ div.hidden{
 
 .mint_ship_container{
     height: 100vh;
-    background-image: url("https://ik.imagekit.io/6pl7k4a01ha/Mint/ship_desktop_yJgKRWdup.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651155278948");
+    background-image: url("https://ik.imagekit.io/6pl7k4a01ha/Mint/shipdesktop-min_OW1uZUQf6.png?ik-sdk-version=javascript-1.4.3&updatedAt=1652580350381");
     -webkit-background-size: auto 100vh;
     background-size: auto 100vh;
     background-repeat: no-repeat;
@@ -198,7 +198,8 @@ div.hidden{
     }
     
     .mint_ship_container{
-        background-image: url('https://ik.imagekit.io/6pl7k4a01ha/Mint/ship_mobilee-min_B6v0RIL_0.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651157340758');
+        /* background-image: url('https://ik.imagekit.io/6pl7k4a01ha/Mint/ship_mobilee-min_B6v0RIL_0.png?ik-sdk-version=javascript-1.4.3&updatedAt=1651157340758'); */
+        background-image: url('https://ik.imagekit.io/6pl7k4a01ha/Mint/shipmobile_1-min_Uw-7GcPKw.png?ik-sdk-version=javascript-1.4.3&updatedAt=1652580616828');
     }
     .mint_button{
         width: 16%;
@@ -238,7 +239,7 @@ div.hidden{
     }
 }
 
-@media screen and (max-width:1300px) {
+@media screen and (max-width:1300px) and (min-aspect-ratio: 1/1) {
     .mint_counter {
         left: calc(50vw - 11.8vh);
     }
@@ -246,6 +247,8 @@ div.hidden{
         margin: 0 1rem;
     }
 }
+
+
 
 @media screen and (max-width:500px) {
     .mint_counter_text{
@@ -256,6 +259,25 @@ div.hidden{
     }
 }
 
+@media screen and (max-width: 389px){
+    .mint_counter {
+        left: calc(44vw - 7.8vh);
+    }
+    .mint_counter {
+        left: calc(44vw - 9.8vh);
+        font-size: 1.5rem;
+    }
+    .mint_counter button {
+        width: 30px;
+    }  
+}
+
+@media screen and (max-width: 370px){
+    .mint_counter {
+        left: calc(44vw - 7.8vh);
+    }
+    
+}
 
 
 
