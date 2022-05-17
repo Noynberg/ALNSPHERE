@@ -33,7 +33,14 @@
 
 @media (min-width: 0) and (max-width: 800px){
     .responsive_youtube{
-        width:90vw;
+        width: 90vw;
         height: calc(720/1280 * 90vw);
+    }
+}
+
+@media screen and (min-aspect-ratio: 1564/833) {
+    .responsive_youtube{
+        width: calc(1280/720 * 65vh);
+        height: 65vh;
     }
 }

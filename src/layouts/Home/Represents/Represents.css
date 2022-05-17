@@ -54,7 +54,7 @@
   border-radius: 25px;
   /* max-width: 534.33px; */
   position: relative;
-
+max-width: 700px;
   /* TO COVER THE BORDER LAYER BACKING IT */
   margin-left: 27px;
   margin-bottom: 26px;
@@ -104,7 +104,7 @@
     flex-direction: column;
   }
   .represents-right-img1{
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 }
 
