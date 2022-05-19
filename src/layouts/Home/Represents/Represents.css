@@ -83,7 +83,7 @@ max-width: 700px;
   width: 100px;
   height: 100px;
 }
-.represents-right-img2{
+.represents-right-img1{
   display: none;
 }
 
@@ -126,7 +126,7 @@ max-width: 700px;
 }
 
 @media screen and (max-width:801px) {
-  .represents-right-img2{
+  .represents-right-img1{
     display: block;
   }
   .represents-right-img1{

@@ -8,7 +8,6 @@ const TriShapeButton = React.lazy(() =>
 );
 
 function Represents() {
-  
   const {setShowTeaserModal} = useContext(DataContext);
 
   return (
