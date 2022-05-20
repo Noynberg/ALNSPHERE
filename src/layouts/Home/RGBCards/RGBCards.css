@@ -126,6 +126,14 @@
 
 .rgb::after {
   content:"";
+  position: absolute;
+  inset: -3px;
+  border-radius: 16px;
+  filter: blur(8px);
+  transform: translateZ(-1px);
+}
+.rgb:hover::after{
+  animation: rgb 6s linear infinite;
   background: linear-gradient(45deg,
   #ff0000 0%, 
   #ff9a00 10%,
@@ -139,12 +147,6 @@
   #fb07d9 90%, 
   #ff0000 100%  )
   repeat 0% 0% / 300% 100%;
-  position: absolute;
-  inset: -3px;
-  border-radius: 16px;
-  filter: blur(8px);
-  transform: translateZ(-1px);
-  animation: rgb 6s linear infinite;
 }
 @keyframes rgb {
   0% {background-position: 0% 50%;}
